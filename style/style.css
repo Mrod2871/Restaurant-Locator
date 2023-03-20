@@ -9,3 +9,8 @@ h1{
     margin-top: 300px;
     color: lightblue;
 }
+main{
+    display: flex;
+    justify-content: left;
+    align-items: flex-start;
+}

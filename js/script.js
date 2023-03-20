@@ -31,10 +31,11 @@ function handleGetData(event){
     (error) => {
       console.log('bad request: ', error);
     }
-    
   );
 }
 function render(){
+    responseData.restaurants.forEach((element, idx) => {
+    });
     $name.text(responseData.restaurants[0].restaurantName);
     $ads.text(responseData.restaurants[0].address);
     $wbs.text(responseData.restaurants[0].website)

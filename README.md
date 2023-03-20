@@ -10,6 +10,6 @@ A web application that displays restaurants that are in a zipcode
 ## Screenshots
 ![Screenshot of web app](https://user-images.githubusercontent.com/126505925/226476381-1f1cad82-afee-4ffc-902d-df53c4035bfa.png)
 ## Getting Started
-Hit this [link](https://mrod2871.github.io){:target="-blank"} to use the app!
+Hit this [link](https://mrod2871.github.io) to use the app!
 ## Future Enhancements
 - The ability to filter restaurant types.

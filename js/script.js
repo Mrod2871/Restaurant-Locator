@@ -1,6 +1,6 @@
-
+//Global scope
 let responseData, userInput;
-
+//Setting variables
 const $name = $('#name')
 const $ads = $('#address')
 const $wbs = $('#website')
@@ -22,13 +22,18 @@ const $wbs3 = $('#website3')
 const $hrs3 = $('#hours3')
 const $input = $('input[type="text"]')
 
+
+//Assigning the submit function for form to get userinput
 $('form').on('submit', handleGetData)
 
+
+//Function for getting data from API
 function handleGetData(event){
   event.preventDefault()
- // calling preventDefault() on a 'submit' event will prevent a page refresh
-  userInput = $input.val()
-// getting the user input
+  // calling preventDefault() on a 'submit' event will prevent a page refresh
+
+  userInput = $input.val()// getting the user input
+
   $.ajax({
     method: 'GET',
     url: 'https://restaurants-near-me-usa.p.rapidapi.com/restaurants/location/zipcode/'+userInput+'/0',
@@ -48,26 +53,26 @@ function handleGetData(event){
     }
   );
 }
+
+//Function to allow data to render in ul
 function render(){
-    responseData.restaurants.forEach((element, idx) => {
-    });
-      $name.text(responseData.restaurants[0].restaurantName);
-    $ads.text(responseData.restaurants[0].address);
-    $wbs.text(responseData.restaurants[0].website)
-    $hrs.text(responseData.restaurants[0].hoursInterval);
+    $name.text(responseData.restaurants[0].restaurantName);
+  $ads.text(responseData.restaurants[0].address);
+  $wbs.text(responseData.restaurants[0].website)
+  $hrs.text(responseData.restaurants[0].hoursInterval);
 
-      $name1.text(responseData.restaurants[1].restaurantName);
-    $ads1.text(responseData.restaurants[1].address);
-    $wbs1.text(responseData.restaurants[1].website);
-    $hrs1.text(responseData.restaurants[1].hoursInterval);
+    $name1.text(responseData.restaurants[1].restaurantName);
+  $ads1.text(responseData.restaurants[1].address);
+  $wbs1.text(responseData.restaurants[1].website);
+  $hrs1.text(responseData.restaurants[1].hoursInterval);
 
-      $name2.text(responseData.restaurants[2].restaurantName);
-    $ads2.text(responseData.restaurants[2].address);
-    $wbs2.text(responseData.restaurants[2].website);
-    $hrs2.text(responseData.restaurants[2].hoursInterval);
+    $name2.text(responseData.restaurants[2].restaurantName);
+  $ads2.text(responseData.restaurants[2].address);
+  $wbs2.text(responseData.restaurants[2].website);
+  $hrs2.text(responseData.restaurants[2].hoursInterval);
 
-      $name3.text(responseData.restaurants[3].restaurantName);
-    $ads3.text(responseData.restaurants[3].address);
-    $wbs3.text(responseData.restaurants[3].website);
-    $hrs3.text(responseData.restaurants[3].hoursInterval);
+    $name3.text(responseData.restaurants[3].restaurantName);
+  $ads3.text(responseData.restaurants[3].address);
+  $wbs3.text(responseData.restaurants[3].website);
+  $hrs3.text(responseData.restaurants[3].hoursInterval);
 }

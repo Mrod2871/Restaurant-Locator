@@ -70,5 +70,4 @@ function render(){
     $ads3.text(responseData.restaurants[3].address);
     $wbs3.text(responseData.restaurants[3].website);
     $hrs3.text(responseData.restaurants[3].hoursInterval);
-
 }

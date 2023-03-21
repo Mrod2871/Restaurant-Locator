@@ -27,6 +27,13 @@ const $list = $('main')
 $('form').on('submit', handleGetData)
 
 
+//Function to validate ZIP Code
+
+function validateZipcode(zipcode){
+  const zipcodeFormat = /^\d{5}(?:[-\s]\d{4})?$/
+  return zipcodeFormat.test(userInput)
+}
+
 //Function for getting data from API
 function handleGetData(event){
   event.preventDefault()
@@ -38,19 +45,25 @@ function handleGetData(event){
     method: 'GET',
     url: 'https://restaurants-near-me-usa.p.rapidapi.com/restaurants/location/zipcode/'+userInput+'/0',
     headers: {
-      'X-RapidAPI-Key': 'ec8ff9b683mshb7afe1ccfc4e8b5p12b111jsnbea7ad52f029',
+      'X-RapidAPI-Key': 'c7851197famsh30acf2e54bd5382p12ab36jsn27bb14107f2c',
       'X-RapidAPI-Host': 'restaurants-near-me-usa.p.rapidapi.com'
     }
   })
   .then(
     (data) => {
       responseData = data
+      if (!validateZipcode(userInput)){
+        alert('Invalid Zip Code. Please enter valid US ZIP Code')
+        document.getElementById('inp').value = ''
+      }
       render()
       document.getElementById('main').style.display = 'flex'
       document.getElementById('inp').value = ''
+      
     },
     (error) => {
       console.log('bad request: ', error);
+      document.getElementById('inp').value = ''
     }
   );
 }

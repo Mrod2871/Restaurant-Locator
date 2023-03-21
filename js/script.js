@@ -23,7 +23,7 @@ const $hrs3 = $('#hours3')
 const $input = $('input[type="text"]')
 
 
-//Assigning the submit function for form to get userinput
+//Assigning the event listener for form to get userinput
 $('form').on('submit', handleGetData)
 
 

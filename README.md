@@ -8,7 +8,7 @@ A web application that displays restaurants that are in given zipcode
 - Google Fonts
 - Restaurant Locator API
 ## Screenshots
-![Screenshot of web app](https://user-images.githubusercontent.com/126505925/226476381-1f1cad82-afee-4ffc-902d-df53c4035bfa.png)
+![Screenshot of web app](https://user-images.githubusercontent.com/126505925/226662669-7ebb02db-c843-403c-93f2-0650146ac063.png)
 ## Getting Started
 Hit this [link](https://mrod2871.github.io) to use the app!
 ## Future Enhancements

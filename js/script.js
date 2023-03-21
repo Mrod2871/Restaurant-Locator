@@ -21,7 +21,7 @@ const $ads3 = $('#address3')
 const $wbs3 = $('#website3')
 const $hrs3 = $('#hours3')
 const $input = $('input[type="text"]')
-
+const $list = $('main')
 
 //Assigning the event listener for form to get userinput
 $('form').on('submit', handleGetData)
@@ -46,7 +46,7 @@ function handleGetData(event){
     (data) => {
       responseData = data
       render()
-      console.log(responseData)
+      document.getElementById('main').style.display = 'flex'
     },
     (error) => {
       console.log('bad request: ', error);

@@ -1,5 +1,5 @@
 # Restaurant Locator
-A web application that displays restaurants that are in given zipcode
+A web application that displays restaurants that are in a given zipcode
 ## Technologies Used
 - HTML
 - CSS

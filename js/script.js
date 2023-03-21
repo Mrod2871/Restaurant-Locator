@@ -21,25 +21,24 @@ const $ads3 = $('#address3')
 const $wbs3 = $('#website3')
 const $hrs3 = $('#hours3')
 const $input = $('input[type="text"]')
-const $list = $('main')
 
 //Assigning the event listener for form to get userinput
 $('form').on('submit', handleGetData)
 
 
 //Function to validate ZIP Code
-
 function validateZipcode(zipcode){
   const zipcodeFormat = /^\d{5}(?:[-\s]\d{4})?$/
   return zipcodeFormat.test(userInput)
 }
 
-//Function for getting data from API
+//Function to get data from API
 function handleGetData(event){
-  event.preventDefault()
   // calling preventDefault() on a 'submit' event will prevent a page refresh
-
-  userInput = $input.val()// getting the user input
+  event.preventDefault()
+  
+  // getting the user input
+  userInput = $input.val()
 
   $.ajax({
     method: 'GET',
@@ -59,7 +58,6 @@ function handleGetData(event){
       render()
       document.getElementById('main').style.display = 'flex'
       document.getElementById('inp').value = ''
-      
     },
     (error) => {
       console.log('bad request: ', error);
@@ -68,7 +66,7 @@ function handleGetData(event){
   );
 }
 
-//Function to allow data to render in ul
+//Function to render data in ul
 function render(){
     $name.text(responseData.restaurants[0].restaurantName);
   $ads.text(responseData.restaurants[0].address);

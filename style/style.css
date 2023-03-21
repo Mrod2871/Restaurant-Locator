@@ -8,13 +8,29 @@ body{
 }
 h1{
     margin-top: 300px;
+    margin-bottom: 100px;
     color: lightblue;
 }
 #main{
+    display: none;
     justify-content: left;
     align-items: flex-start;
-    display: none;
+    font-size: small;
 }
 form{
     margin-top: 50px;
+}
+
+@media (max-width: 1200px) {
+    #main{
+        align-items: left;
+        flex-direction: column;
+        font-size: smaller;
+    }
+    h1{
+        margin-top: 60px;   
+    }
+    form{
+        margin-bottom: 100px;
+    }
 }

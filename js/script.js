@@ -47,6 +47,7 @@ function handleGetData(event){
       responseData = data
       render()
       document.getElementById('main').style.display = 'flex'
+      document.getElementById('inp').value = ''
     },
     (error) => {
       console.log('bad request: ', error);

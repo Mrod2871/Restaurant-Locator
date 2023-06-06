@@ -44,7 +44,7 @@ function handleGetData(event){
     method: 'GET',
     url: 'https://restaurants-near-me-usa.p.rapidapi.com/restaurants/location/zipcode/'+userInput+'/0',
     headers: {
-      'X-RapidAPI-Key': 'c7851197famsh30acf2e54bd5382p12ab36jsn27bb14107f2c',
+      'X-RapidAPI-Key': 'f2bbf4f3b4msh4a8da930192228cp15a589jsncac8ff0f06da',
       'X-RapidAPI-Host': 'restaurants-near-me-usa.p.rapidapi.com'
     }
   })
